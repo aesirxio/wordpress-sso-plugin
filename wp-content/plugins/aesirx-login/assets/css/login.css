@@ -1,0 +1,9 @@
+.aesirx-wrap .aesirx_submit {
+	width: 100%;
+	margin: 0 0 16px 0;
+	line-height: 2em;
+	white-space: normal;
+}
+.aesirx-wrap .aesirx_submit svg {
+	vertical-align: middle;
+}
