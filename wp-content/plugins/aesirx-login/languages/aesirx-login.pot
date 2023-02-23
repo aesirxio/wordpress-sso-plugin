@@ -1,0 +1,93 @@
+# Copyright (C) 2023 aesirx.io
+# This file is distributed under the same license as the aesirx-login plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: aesirx-login 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aesirx-login\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-02-23T17:21:17+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: aesirx-login\n"
+
+#. Plugin Name of the plugin
+msgid "aesirx-login"
+msgstr ""
+
+#. Description of the plugin
+msgid "Let users be auth via Aesirx."
+msgstr ""
+
+#. Author of the plugin
+msgid "aesirx.io"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://aesirx.io/"
+msgstr ""
+
+#: aesirx-login.php:127
+#: assets/js/login.js:1
+msgid "Login"
+msgstr ""
+
+#: includes/ajax.php:63
+msgid "Aesirx user has not been linked yet, you can log-in or signup then it will be linked for future logins"
+msgstr ""
+
+#: includes/ajax.php:69
+msgid "Aesirx user has not been linked yet, you can log-in then it will be linked for future logins"
+msgstr ""
+
+#: includes/settings.php:14
+msgid "Client id is empty."
+msgstr ""
+
+#: includes/settings.php:20
+msgid "Client secret is empty."
+msgstr ""
+
+#: includes/settings.php:26
+msgid "Endpoint is empty."
+msgstr ""
+
+#: includes/settings.php:31
+msgid "Invalid endpoint format."
+msgstr ""
+
+#: includes/settings.php:43
+msgid "Here you can set all the options for using the aesirx log-in"
+msgstr ""
+
+#: includes/settings.php:46
+msgid "Endpoint <i>(Use next format: http://example.com)</i>"
+msgstr ""
+
+#: includes/settings.php:51
+msgid "Client id"
+msgstr ""
+
+#: includes/settings.php:56
+msgid "Client secret"
+msgstr ""
+
+#: includes/settings.php:64
+#: includes/settings.php:65
+msgid "aesirx"
+msgstr ""
+
+#: assets/js/login.js:1
+msgid "Processed. Redirecting..."
+msgstr ""
+
+#: assets/js/login.js:1
+msgid "Aesirx login was rejected. Try Again?"
+msgstr ""
+
+#: assets/js/login.js:1
+msgid "Processing..."
+msgstr ""
