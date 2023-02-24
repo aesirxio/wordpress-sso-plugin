@@ -49,12 +49,12 @@ add_action('admin_init', function () {
 		echo '<p>' . __('Here you can set all the options for using the aesirx log-in', 'aesirx-login') . '</p>';
 	}, 'aesirx_login_plugin');
 
-	add_settings_field("aesirx_login_logins", __('Allowed Logins', 'concordium-login'), function () {
+	add_settings_field("aesirx_login_logins", __('Allowed Logins', 'aesirx-login'), function () {
 		$options = get_option('aesirx_login_plugin_options', []);
 		$list = [
-			'concordium' => __('Concordium', 'concordium-login'),
-			'metamask' => __('Metamask', 'concordium-login'),
-			'regular' => __('Regular Login', 'concordium-login'),
+			'concordium' => __('Concordium', 'aesirx-login'),
+			'metamask' => __('Metamask', 'aesirx-login'),
+			'regular' => __('Regular Login', 'aesirx-login'),
 		];
 
 		if (!array_key_exists('logins', $options))
