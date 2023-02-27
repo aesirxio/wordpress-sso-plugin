@@ -26,5 +26,5 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "dist/plg_system_aesirx_sso.zip"
+          artifacts: "dist/plg_aesirx_login.zip"
           generateReleaseNotes: true
