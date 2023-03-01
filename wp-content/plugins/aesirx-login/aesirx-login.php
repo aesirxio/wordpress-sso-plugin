@@ -116,6 +116,7 @@ function aesirx_login_form_button(): void
 			'ajaxurl' => admin_url('admin-ajax.php'),
 			'aesirxEndpoint' => rtrim($options['endpoint'] ?? '', ' /'),
 			'aesirxClientID' => $options['client_id'] ?? '',
+			'aesirxAllowedLogins' => $options['logins'] ?? ['concordium', 'metamask', 'regular'],
 			'aesirxState' => $state,
 		]
 	);
