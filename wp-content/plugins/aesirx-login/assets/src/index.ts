@@ -66,6 +66,8 @@ export async function run() {
     window.aesirxClientID = AESIRX_VAL.aesirxClientID;
     // @ts-ignore
     window.aesirxSSOState = AESIRX_VAL.aesirxState;
+    // @ts-ignore
+    window.aesirxAllowedLogins = AESIRX_VAL.aesirxAllowedLogins;
 
     const onGetData = (btn: AesirxButton) => {
         return async (response: AesirxResponse) => {

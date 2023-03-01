@@ -31,6 +31,12 @@ add_action('admin_init', function () {
 				add_settings_error('aesirx_login_plugin_options', 'json_hostname', __('Invalid endpoint format.', 'aesirx-login'));
 			}
 
+			if (empty($input['logins']))
+			{
+				$valid = false;
+				add_settings_error('aesirx_login_plugin_options', 'logins', __('Select one of allowed login.', 'aesirx-login'));
+			}
+
 			// Ignore the user's changes and use the old database value.
 			if (!$valid)
 			{
@@ -43,9 +49,29 @@ add_action('admin_init', function () {
 		echo '<p>' . __('Here you can set all the options for using the aesirx log-in', 'aesirx-login') . '</p>';
 	}, 'aesirx_login_plugin');
 
+	add_settings_field("aesirx_login_logins", __('Allowed Logins', 'aesirx-login'), function () {
+		$options = get_option('aesirx_login_plugin_options', []);
+		$list = [
+			'concordium' => __('Concordium', 'aesirx-login'),
+			'metamask' => __('Metamask', 'aesirx-login'),
+			'regular' => __('Regular Login', 'aesirx-login'),
+		];
+
+		if (!array_key_exists('logins', $options))
+		{
+			$options['logins'] = ['concordium', 'metamask', 'regular'];
+		}
+
+		foreach ($list as $key => $item)
+		{
+			$checked = in_array($key, $options['logins'] ?? []) ? ' checked="checked" ' : '';
+			echo "<label><input " . $checked . " value='$key' name='aesirx_login_plugin_options[logins][]' type='checkbox' /> $item</label><br />";
+		}
+	}, 'aesirx_login_plugin', 'aesirx_settings');
+
 	add_settings_field('aesirx_login_endpoint', __('Endpoint <i>(Use next format: http://example.com)</i>', 'aesirx-login'), function () {
 		$options = get_option('aesirx_login_plugin_options', []);
-		echo "<input id='aesirx_login_endpoint' name='aesirx_login_plugin_options[endpoint]' type='text' value='" . esc_attr($options['endpoint'] ?? '') . "' />";
+		echo "<input id='aesirx_login_endpoint' name='aesirx_login_plugin_options[endpoint]' type='text' value='" . esc_attr($options['endpoint'] ?? 'https://api.aesirx.io') . "' />";
 	}, 'aesirx_login_plugin', 'aesirx_settings');
 
 	add_settings_field('aesirx_login_client_id', __('Client id', 'aesirx-login'), function () {
