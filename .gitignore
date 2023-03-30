@@ -1,2 +1,5 @@
 wp-content/plugins/aesirx-login/vendor
 wp-content/plugins/aesirx-login/assets/js
+
+dist/
+node_modules/
